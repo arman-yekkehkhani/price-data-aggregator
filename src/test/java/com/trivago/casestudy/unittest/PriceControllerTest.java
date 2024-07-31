@@ -28,8 +28,8 @@ public class PriceControllerTest {
         int accommodationId = 1;
 
         List<EnrichedPriceItem> priceItemList = List.of(
-                new EnrichedPriceItem(1, "EUR", 120.4f),
-                new EnrichedPriceItem(2, "EUr", 11f)
+                new EnrichedPriceItem("uuid1", 3, 2, "EUR",120.4f),
+                new EnrichedPriceItem("uuid2", 4, 1, "EUR" ,11f)
         );
 
 
@@ -39,8 +39,8 @@ public class PriceControllerTest {
         assertThat(prices)
                 .hasSize(2)
                 .containsExactly(
-                        new EnrichedPriceItem(1, "EUR", 120.4f),
-                        new EnrichedPriceItem(2, "EUr", 11f)
+                        new EnrichedPriceItem("uuid1", 3, 2, "EUR",120.4f),
+                        new EnrichedPriceItem("uuid2", 4, 1, "EUR" ,11f)
                 );
     }
 }
