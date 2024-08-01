@@ -1,10 +1,10 @@
-package com.trivago.casestudy.model;
+package com.trivago.casestudy.models;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "priceItems")
-public record EnrichedPriceItem(
+public record EnrichedPrice(
         @Id
         String uuid,
         Integer advertiserId,

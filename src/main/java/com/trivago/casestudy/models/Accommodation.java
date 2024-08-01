@@ -1,4 +1,4 @@
-package com.trivago.casestudy.model;
+package com.trivago.casestudy.models;
 
 import java.util.List;
 
