@@ -20,6 +20,9 @@ public class KafkaConsumerConfig {
     @Value(value = "${spring.kafka.bootstrap-servers}")
     private String bootstrapAddress;
 
+    @Value(value = "${spring.kafka.consumer.group-id}")
+    private String groupId;
+
     @Bean
     public ConsumerFactory<String, String> consumerFactory() {
         Map<String, Object> props = new HashMap<>();
@@ -28,7 +31,7 @@ public class KafkaConsumerConfig {
                 bootstrapAddress);
         props.put(
                 ConsumerConfig.GROUP_ID_CONFIG,
-                "1");
+                groupId);
         props.put(
                 ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,
                 StringDeserializer.class);
