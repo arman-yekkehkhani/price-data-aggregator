@@ -1,7 +1,7 @@
-package com.trivago.casestudy;
+package com.trivago.casestudy.services;
 
-import com.trivago.casestudy.model.EnrichedPriceItem;
-import com.trivago.casestudy.repo.EnrichedPriceRepository;
+import com.trivago.casestudy.models.EnrichedPrice;
+import com.trivago.casestudy.repos.EnrichedPriceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ public class PriceService {
         this.enrichedPriceRepository = enrichedPriceRepository;
     }
 
-    public List<EnrichedPriceItem> getPricesForAccommodation(int accommodationId) {
+    public List<EnrichedPrice> getPricesForAccommodation(int accommodationId) {
         return enrichedPriceRepository.findAllByAccommodationId(accommodationId);
     }
 }

@@ -1,8 +1,8 @@
 package com.trivago.casestudy.unitTests;
 
-import com.trivago.casestudy.PriceService;
-import com.trivago.casestudy.model.EnrichedPriceItem;
-import com.trivago.casestudy.repo.EnrichedPriceRepository;
+import com.trivago.casestudy.services.PriceService;
+import com.trivago.casestudy.models.EnrichedPrice;
+import com.trivago.casestudy.repos.EnrichedPriceRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -26,10 +26,10 @@ public class PriceServiceTest {
     void givenAccommodationId_whenAskForPrices_shouldFetchFromRepoAndReturnList() {
         int accommodationId = 1;
         when(enrichedPriceRepository.findAllByAccommodationId(accommodationId)).thenReturn(
-                List.of(new EnrichedPriceItem("uuid", 1, accommodationId, "EUR", 100f))
+                List.of(new EnrichedPrice("uuid", 1, accommodationId, "EUR", 100f))
         );
 
-        List<EnrichedPriceItem> pricesForAccommodation = priceService.getPricesForAccommodation(accommodationId);
+        List<EnrichedPrice> pricesForAccommodation = priceService.getPricesForAccommodation(accommodationId);
 
         assertThat(pricesForAccommodation)
                 .hasSizeGreaterThan(0);

@@ -1,8 +1,8 @@
 package com.trivago.casestudy.unitTests;
 
-import com.trivago.casestudy.PriceController;
-import com.trivago.casestudy.PriceService;
-import com.trivago.casestudy.model.EnrichedPriceItem;
+import com.trivago.casestudy.controllers.PriceController;
+import com.trivago.casestudy.services.PriceService;
+import com.trivago.casestudy.models.EnrichedPrice;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -27,20 +27,20 @@ public class PriceControllerTest {
     void givenAccommodationId_whenGetPrices_shouldReturnListOfPrices() {
         int accommodationId = 1;
 
-        List<EnrichedPriceItem> priceItemList = List.of(
-                new EnrichedPriceItem("uuid1", 3, 2, "EUR",120.4f),
-                new EnrichedPriceItem("uuid2", 4, 1, "EUR" ,11f)
+        List<EnrichedPrice> priceItemList = List.of(
+                new EnrichedPrice("uuid1", 3, 2, "EUR",120.4f),
+                new EnrichedPrice("uuid2", 4, 1, "EUR" ,11f)
         );
 
 
         when(priceService.getPricesForAccommodation(accommodationId)).thenReturn(priceItemList);
 
-        List<EnrichedPriceItem> prices = priceController.getPrices(1);
+        List<EnrichedPrice> prices = priceController.getPrices(1);
         assertThat(prices)
                 .hasSize(2)
                 .containsExactly(
-                        new EnrichedPriceItem("uuid1", 3, 2, "EUR",120.4f),
-                        new EnrichedPriceItem("uuid2", 4, 1, "EUR" ,11f)
+                        new EnrichedPrice("uuid1", 3, 2, "EUR",120.4f),
+                        new EnrichedPrice("uuid2", 4, 1, "EUR" ,11f)
                 );
     }
 }

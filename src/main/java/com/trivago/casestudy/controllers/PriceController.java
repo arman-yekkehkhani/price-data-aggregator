@@ -1,8 +1,9 @@
-package com.trivago.casestudy;
+package com.trivago.casestudy.controllers;
 
 import java.util.List;
 
-import com.trivago.casestudy.model.EnrichedPriceItem;
+import com.trivago.casestudy.services.PriceService;
+import com.trivago.casestudy.models.EnrichedPrice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,7 +20,7 @@ public class PriceController {
   }
 
   @GetMapping("/prices/{accommodationId}")
-  public List<EnrichedPriceItem> getPrices(@PathVariable int accommodationId) {
+  public List<EnrichedPrice> getPrices(@PathVariable int accommodationId) {
     return priceService.getPricesForAccommodation(accommodationId);
   }
 }
