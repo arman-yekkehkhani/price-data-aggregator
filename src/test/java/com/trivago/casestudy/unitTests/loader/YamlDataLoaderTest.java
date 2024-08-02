@@ -1,7 +1,7 @@
 package com.trivago.casestudy.unitTests.loader;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.trivago.casestudy.services.dataloader.JsonLoader;
+import com.trivago.casestudy.services.dataloader.JsonDataLoader;
 import com.trivago.casestudy.models.AdvertiserInfo;
 import com.trivago.casestudy.util.ObjectMapperFactory;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -16,14 +16,14 @@ import java.net.URL;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class YamlLoaderTest {
+public class YamlDataLoaderTest {
     @Mock
     ObjectMapper objectMapper;
 
     @Mock
     ObjectMapperFactory objectMapperFactory;
 
-    JsonLoader loader = new JsonLoader();
+    JsonDataLoader loader = new JsonDataLoader();
 
     @ParameterizedTest
     @CsvSource({"yaml, /prices/advertiser_100.yaml", "json, /prices/advertiser_200.json"})
