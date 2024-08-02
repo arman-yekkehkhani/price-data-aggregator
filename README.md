@@ -6,6 +6,8 @@ and then streamed into Kafka. A consumer reads enriched prices and persist them 
 request is made to `/prices` endpoint: if the result is not already cached in Redis, a query is made to MongoDB. Otherwise,
 the cached result is returned.
 
+![arch.001.png](arch.001.png)
+
 ## Setup Instructions
 
 1. Run `docker compose up -d` in the project folder to spin up mongoDB, Kafka, and Redis instances.
