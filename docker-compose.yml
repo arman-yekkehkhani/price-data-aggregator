@@ -1,0 +1,21 @@
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "127.0.0.1:27017:27017"
+    volumes:
+      - ./persist/mongo/data/db:/data/db:z
+      - ./persist/mongo/logs:/var/log/mongodb:z
+
+  kafka:
+      image: apache/kafka:latest
+      container_name: broker
+      ports:
+        - "127.0.0.1:9092:9092"
+
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - "127.0.0.1:6379:6379"
