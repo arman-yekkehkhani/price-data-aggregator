@@ -1,4 +1,4 @@
-package com.trivago.casestudy.unitTests;
+package com.trivago.casestudy.unitTests.services;
 
 import com.trivago.casestudy.services.PriceService;
 import com.trivago.casestudy.models.EnrichedPrice;

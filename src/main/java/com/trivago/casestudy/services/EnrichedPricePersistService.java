@@ -17,7 +17,7 @@ public class EnrichedPricePersistService {
     }
 
     @KafkaListener(topics = "accommodation", groupId = "1")
-    public void listenGroupFoo(EnrichedPrice enrichedPrice) {
+    public void receiveMessage(EnrichedPrice enrichedPrice) {
         enrichedPriceRepository.save(enrichedPrice);
     }
 }
