@@ -1,4 +1,4 @@
-package com.trivago.casestudy.kafka;
+package com.trivago.casestudy.config.kafka.kafka;
 
 import org.apache.kafka.clients.admin.AdminClientConfig;
 import org.apache.kafka.clients.admin.NewTopic;

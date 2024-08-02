@@ -1,4 +1,4 @@
-package com.trivago.casestudy.kafka;
+package com.trivago.casestudy.config.kafka.kafka;
 
 import com.trivago.casestudy.models.EnrichedPrice;
 import org.apache.kafka.clients.consumer.ConsumerConfig;

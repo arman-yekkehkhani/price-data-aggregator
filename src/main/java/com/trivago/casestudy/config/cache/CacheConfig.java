@@ -1,4 +1,4 @@
-package com.trivago.casestudy.cache;
+package com.trivago.casestudy.config.cache;
 
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
