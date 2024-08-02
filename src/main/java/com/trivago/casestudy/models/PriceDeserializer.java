@@ -1,4 +1,4 @@
-package com.trivago.casestudy.model;
+package com.trivago.casestudy.models;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
