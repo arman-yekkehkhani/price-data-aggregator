@@ -4,6 +4,6 @@ import com.trivago.casestudy.models.AdvertiserInfo;
 
 import java.net.URL;
 
-public interface FileDataLoader {
+public interface DataLoader {
     AdvertiserInfo loadFrom(URL resource);
 }

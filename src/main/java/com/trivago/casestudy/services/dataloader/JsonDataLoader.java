@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.net.URL;
 
 @Component("jsonDataLoader")
-public class JsonDataLoader implements FileDataLoader {
+public class JsonDataLoader implements DataLoader {
 
     @Override
     public AdvertiserInfo loadFrom(URL resource) {

@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.net.URL;
 
 @Component("yamlDataLoader")
-public class YamlDataLoader implements FileDataLoader {
+public class YamlDataLoader implements DataLoader {
 
     @Override
     public AdvertiserInfo loadFrom(URL resource) {
