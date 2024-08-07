@@ -1,4 +1,4 @@
-# Template Case Study
+# Asynchronous Data Aggregator
 
 Here is a brief description of the project architecture:
 The input data is loaded through various DataLoaders(inside `services/dataloader`) and enriched to become `EnrichedPrice`
@@ -38,7 +38,7 @@ third-party API. Because the request will be handled asynchronously and the data
 consumed and persisted to our database. But we need to make sure upon receiving new data our cache is accordingly evicted
 to be filled with fresh data later.
 
-### How could your solution scale for multiple thousand requests per second?
+### How could it be scaled for multiple thousand requests per second?
 
 To ensure the scalability of the service, certain design decisions has been made:
 1. Data providers share a unified API to load data from various sources, and stream their data into Kafka. Thus, our 

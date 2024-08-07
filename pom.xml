@@ -8,11 +8,10 @@
 		<version>2.7.13</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.trivago</groupId>
-	<artifactId>casestudy</artifactId>
+	<groupId>com.example</groupId>
+	<artifactId>price_data_aggregator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>casestudy</name>
-	<description>Accommodation Core Case Study</description>
+	<name>Price Data Aggregator</name>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
